@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/png" href="favicon.png">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Zekraft Systems | Business Launch & Brand Presence</title>
@@ -33,6 +34,11 @@
     --card-shadow:0 16px 48px rgba(0,0,0,0.16);
     --font-primary:'Montserrat', sans-serif;
     --font-secondary:'Inter', sans-serif;
+    --type-hero:clamp(2.375rem, 4.2vw + 0.8rem, 4rem);
+    --type-section:clamp(2rem, 1.8vw + 1.4rem, 2.5rem);
+    --type-subheading:clamp(1.15rem, 0.6vw + 1rem, 1.375rem);
+    --type-body:clamp(1.0625rem, 0.15vw + 1rem, 1.125rem);
+    --type-caption:0.875rem;
 }
 html{scroll-behavior:smooth;}
 body{font-family:var(--font-secondary);background:linear-gradient(135deg,#0b0f0b 0%,#111611 100%);color:var(--white);overflow-x:hidden;}
@@ -96,7 +102,7 @@ nav.scrolled{background:rgba(8, 10, 8, 0.95);border-bottom-color:rgba(255,255,25
 .hero-eyebrow-dash{width:32px;height:1px;background:var(--accent);}
 .hero-headline{
   font-family:var(--font-primary);font-weight:700;
-  font-size:clamp(32px,5.2vw,96px);line-height:0.94;
+  font-size:var(--type-hero);line-height:0.94;
   letter-spacing:-0.02em;color:var(--silver);
   max-width:100%;
   white-space:normal;
@@ -104,13 +110,13 @@ nav.scrolled{background:rgba(8, 10, 8, 0.95);border-bottom-color:rgba(255,255,25
 }
 .hero-headline .accent{color:var(--green);}
 .hero-headline .line-2{
-  display:block;font-family:var(--font-secondary);font-weight:400;
-  font-size:clamp(14px,2vw,24px);letter-spacing:0.01em;
+  display:block;font-family:var(--font-secondary);font-weight:500;
+  font-size:var(--type-subheading);letter-spacing:0.01em;
   color:rgba(199,199,199,0.92);margin-top:16px;margin-bottom:28px;font-style:italic;line-height:1.45;
   max-width:560px;padding:0;background:none;border:none;backdrop-filter:none;
 }
 .hero-sub{
-  font-size:15px;font-weight:300;line-height:1.7;
+  font-size:var(--type-body);font-weight:300;line-height:1.7;
   color:rgba(199,199,199,0.9);max-width:500px;
   margin-top:24px;margin-bottom:32px;
   opacity:0;animation:fadeUp 0.8s 0.5s forwards;
@@ -165,9 +171,9 @@ nav.scrolled{background:rgba(8, 10, 8, 0.95);border-bottom-color:rgba(255,255,25
 
 /* SERVICES */
 .services{background:linear-gradient(135deg,#e7ebe0 0%,#dfe4d8 100%);padding:110px 5vw;}
-.section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:rgba(1,199,75,0.08);width:fit-content;border:1px solid rgba(1,199,75,0.14);} 
+.section-eyebrow{font-size:var(--type-caption);font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:rgba(1,199,75,0.08);width:fit-content;border:1px solid rgba(1,199,75,0.14);} 
 .section-eyebrow::before{content:'';width:20px;height:1px;background:var(--accent);}
-.section-title{font-family:var(--font-primary);font-weight:700;font-size:clamp(30px,3.4vw,48px);line-height:1.05;color:#111;margin-bottom:56px;letter-spacing:-0.02em;max-width:720px;}
+.section-title{font-family:var(--font-primary);font-weight:700;font-size:var(--type-section);line-height:1.05;color:#111;margin-bottom:56px;letter-spacing:-0.02em;max-width:720px;}
 .section-title.light{color:var(--white);}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .service-card{background:linear-gradient(135deg,rgba(250,251,248,0.96),rgba(241,244,236,0.96));padding:36px 30px;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;border:1px solid rgba(17,17,17,0.08);border-radius:24px;box-shadow:0 10px 24px rgba(10,10,10,0.06);} 
@@ -178,10 +184,10 @@ nav.scrolled{background:rgba(8, 10, 8, 0.95);border-bottom-color:rgba(255,255,25
 .service-num{font-family:var(--font-primary);font-weight:700;font-size:42px;color:rgba(1,199,75,0.16);line-height:1;margin-bottom:20px;transition:color 0.3s;position:relative;z-index:2;}
 .service-card:hover .service-num{color:rgba(1,199,75,0.24);}
 .service-icon{font-size:28px;margin-bottom:20px;display:block;position:relative;z-index:2;}
-.service-name{font-family:var(--font-primary);font-weight:700;font-size:21px;color:#171717;margin-bottom:14px;position:relative;z-index:2;}
-.service-desc{font-size:15px;line-height:1.78;color:#4b4b4b;position:relative;z-index:2;}
+.service-name{font-family:var(--font-primary);font-weight:700;font-size:var(--type-subheading);color:#171717;margin-bottom:14px;position:relative;z-index:2;}
+.service-desc{font-size:var(--type-body);line-height:1.78;color:#4b4b4b;position:relative;z-index:2;}
 .service-list{margin-top:20px;list-style:none;display:flex;flex-direction:column;gap:8px;position:relative;z-index:2;}
-.service-list li{font-size:13px;color:#525252;display:flex;align-items:center;gap:10px;}
+.service-list li{font-size:var(--type-caption);color:#525252;display:flex;align-items:center;gap:10px;}
 .service-list li::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;box-shadow:0 0 0 4px rgba(1,199,75,0.06);}
 
 /* AUTOMATION FEATURE */
@@ -208,20 +214,20 @@ nav.scrolled{background:rgba(8, 10, 8, 0.95);border-bottom-color:rgba(255,255,25
 }
 .automation-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:dotPulse 1.5s ease-in-out infinite;}
 @keyframes dotPulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
-.automation-title{font-family:var(--font-primary);font-weight:700;font-size:clamp(38px,4.8vw,64px);line-height:1.02;color:var(--silver);margin-bottom:20px;}
+.automation-title{font-family:var(--font-primary);font-weight:700;font-size:var(--type-section);line-height:1.02;color:var(--silver);margin-bottom:20px;}
 .automation-title span{color:var(--accent);}
-.automation-desc{font-size:16px;line-height:1.8;color:rgba(199,199,199,0.9);margin-bottom:32px;}
+.automation-desc{font-size:var(--type-body);line-height:1.8;color:rgba(199,199,199,0.9);margin-bottom:32px;}
 .automation-retainer{
   display:inline-flex;align-items:center;gap:12px;
   background:rgba(1,199,75,0.08);border:1px solid rgba(1,199,75,0.16);
   padding:14px 20px;border-radius:999px;margin-bottom:32px;
 }
-.automation-retainer-label{font-size:12px;color:rgba(199,199,199,0.8);}
-.automation-retainer-value{font-family:var(--font-primary);font-weight:700;font-size:18px;color:var(--accent);}
+.automation-retainer-label{font-size:var(--type-caption);color:rgba(199,199,199,0.8);}
+.automation-retainer-value{font-family:var(--font-primary);font-weight:700;font-size:var(--type-subheading);color:var(--accent);}
 .automation-features{display:flex;flex-direction:column;gap:16px;margin-bottom:36px;}
 .automation-feature{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);border-radius:16px;}
 .automation-feature-icon{width:34px;height:34px;background:rgba(1,199,75,0.08);border:1px solid rgba(1,199,75,0.14);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:2px;}
-.automation-feature-text{font-size:14px;line-height:1.6;color:rgba(199,199,199,0.85);}
+.automation-feature-text{font-size:var(--type-body);line-height:1.6;color:rgba(199,199,199,0.85);}
 .automation-feature-title{font-weight:600;color:var(--silver);margin-bottom:2px;}
 
 /* Bot visual */
@@ -273,20 +279,30 @@ nav.scrolled{background:rgba(8, 10, 8, 0.95);border-bottom-color:rgba(255,255,25
 
 /* PORTFOLIO */
 .portfolio{background:linear-gradient(135deg,#f3f5f1 0%,#edf1e9 100%);padding:110px 5vw;}
-.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-.portfolio-card{background:linear-gradient(135deg,#0f120f 0%,#171b17 100%);aspect-ratio:4/3;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;border:1px solid rgba(1,199,75,0.16);border-radius:24px;box-shadow:0 14px 34px rgba(10,10,10,0.08);cursor:pointer;} 
+.portfolio-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+.portfolio-card{background:linear-gradient(135deg,#0f120f 0%,#171b17 100%);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;border:1px solid rgba(1,199,75,0.16);border-radius:24px;box-shadow:0 14px 34px rgba(10,10,10,0.08);cursor:pointer;}
 .portfolio-card:hover{transform:translateY(-3px);box-shadow:0 20px 42px rgba(10,10,10,0.14);border-color:rgba(1,199,75,0.28);} 
 .portfolio-card.is-open{border-color:rgba(1,199,75,0.34);} 
-.portfolio-card.is-open .portfolio-info{display:none;} 
-.portfolio-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;background:transparent;opacity:0.95;transform:scale(0.98);transition:opacity 0.3s ease,transform 0.3s ease;}
-.portfolio-ph .portfolio-image{position:relative;z-index:2;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:0;transform:scale(0.97);transition:opacity 0.3s ease,transform 0.3s ease;pointer-events:none;}
-.portfolio-card.is-open .portfolio-ph .portfolio-image{opacity:1;transform:scale(1);} 
-.portfolio-info{position:relative;z-index:2;padding:28px 24px;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;background:linear-gradient(to top,rgba(10,10,10,0.86),rgba(10,10,10,0.4));border-radius:24px;}
-.portfolio-client{font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:2px;}
-.portfolio-project{font-family:var(--font-primary);font-weight:700;font-size:24px;color:var(--white);line-height:1.2;} 
-.portfolio-type{font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;}
-.portfolio-view{margin-top:6px;padding:10px 16px;border:1px solid rgba(1,199,75,0.24);color:var(--accent);background:rgba(1,199,75,0.08);border-radius:999px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;transition:all 0.2s ease;} 
-.portfolio-view:hover{background:rgba(1,199,75,0.16);transform:translateY(-1px);}
+.portfolio-info{position:relative;z-index:2;padding:30px 24px;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border-radius:24px 24px 0 0;min-height:150px;}
+.portfolio-client{font-size:8px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:2px;}
+.portfolio-project{font-family:var(--font-primary);font-weight:700;font-size:18px;color:var(--white);line-height:1.15;letter-spacing:-0.01em;} 
+.portfolio-type{font-size:10px;color:rgba(255,255,255,0.58);margin-top:2px;line-height:1.45;}
+.portfolio-view{margin-top:4px;padding:8px 12px;border:1px solid rgba(1,199,75,0.24);color:var(--accent);background:rgba(1,199,75,0.08);border-radius:999px;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;transition:all 0.2s ease;cursor:pointer;}
+.portfolio-view:hover{background:rgba(1,199,75,0.16);transform:translateY(-1px);} 
+.portfolio-accordion{display:none;padding:0 20px 20px;position:relative;z-index:2;}
+.portfolio-card.is-open .portfolio-accordion{display:block;}
+.portfolio-close-btn{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:400;width:48px;height:48px;border:none;border-radius:50%;background:rgba(1,199,75,0.92);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,0.24);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity 0.2s ease,transform 0.2s ease;} 
+.portfolio-card.is-open .portfolio-close-btn{opacity:1;pointer-events:auto;} 
+.portfolio-close-btn:hover{transform:translateX(-50%) scale(1.04);} 
+.portfolio-accordion-panel{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:20px;color:var(--white);position:relative;padding-top:48px;padding-bottom:84px;}
+.portfolio-accordion-panel h3{font-family:var(--font-primary);font-size:18px;font-weight:700;letter-spacing:0.02em;color:var(--accent);margin-bottom:12px;text-transform:uppercase;}
+.portfolio-accordion-panel h4{font-family:var(--font-primary);font-size:14px;font-weight:700;color:var(--white);margin:14px 0 8px;}
+.portfolio-accordion-panel p,.portfolio-accordion-panel li{font-size:13px;line-height:1.7;color:rgba(255,255,255,0.78);} 
+.portfolio-accordion-panel ul{margin:8px 0 0 18px;display:flex;flex-direction:column;gap:6px;}
+.portfolio-accordion-panel .portfolio-accordion-meta{font-size:12px;color:rgba(255,255,255,0.64);margin-bottom:10px;}
+.portfolio-gallery{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;}
+.portfolio-gallery img{display:inline-block;width:auto;max-width:100%;height:180px;object-fit:contain;border-radius:12px;border:1px solid rgba(255,255,255,0.08);justify-self:center;} 
+.portfolio-accordion-result{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);font-size:13px;color:rgba(255,255,255,0.82);}
 
 /* WHY */
 .why{background:linear-gradient(135deg,#0b0f0b 0%,#121612 100%);padding:110px 5vw;}
@@ -602,47 +618,154 @@ footer{background:var(--ink);padding:72px 5vw 36px;border-top:1px solid #111;}
   <h2 class="section-title">Built by Zekraft.</h2>
   <div class="portfolio-grid">
     <div class="portfolio-card" tabindex="0" role="button" aria-label="Open Alayo Building Construction preview">
-      <div class="portfolio-ph">
-        <img class="portfolio-image" src="./assets/alayo.png" alt="Alayo Building Construction preview">
-      </div>
       <div class="portfolio-info">
         <div class="portfolio-client">Client 01</div>
         <div class="portfolio-project">Alayo Building Construction</div>
         <div class="portfolio-type">Website · WhatsApp Integration · Brand</div>
         <div class="portfolio-view">Click to view</div>
       </div>
+      <div class="portfolio-accordion">
+        <div class="portfolio-accordion-panel">
+          <button class="portfolio-close-btn" type="button" aria-label="Close project">×</button>
+          <h3>ALAYO CONSTRUCTION HUB</h3>
+          <div class="portfolio-accordion-meta">Industry · Building Materials & Construction</div>
+          <h4>The Challenge</h4>
+          <p>Alayo Construction Hub supplied quality building materials but lacked a professional online presence. Potential customers had no easy way to discover products, understand the business, or build confidence before making enquiries.</p>
+          <h4>Our Solution</h4>
+          <ul>
+            <li>Designed a clean Brand identity and conversion-focused website </li>
+            <li>Organized products into an easy-to-navigate experience</li>
+            <li>Created a professional digital presence that reflects reliability</li>
+            <li>Built a visual language ready for e-commerce</li>
+          </ul>
+          <h4>Deliverables</h4>
+          <ul>
+            <li>✓ Brand Identity</li>
+            <li>✓ Website Design</li>
+            <li>✓ Product Showcase</li>
+            <li>✓ Digital Brand Presentation</li>
+            <li>✓ Social Media Assets</li>
+          </ul>
+          <div class="portfolio-gallery">
+            <img src="./assets/alayo logo.png" alt="Placeholder mockup 1">
+            <img src="./assets/alayo flier.png" alt="alayo construction hub flier">
+            <img src="./assets/alayo.png" alt="alayo construction website mockup 2">
+          </div>
+        </div>
+      </div>
     </div>
     <div class="portfolio-card" tabindex="0" role="button" aria-label="Open Kraft & Co footwear preview">
-      <div class="portfolio-ph">
-        <img class="portfolio-image" src="./assets/kraft & CO.png" alt="Kraft & Co footwear preview">
-      </div>
       <div class="portfolio-info">
         <div class="portfolio-client">Client 02</div>
         <div class="portfolio-project">Kraft & Co footwear</div>
         <div class="portfolio-type">social media · Brand Identity</div>
         <div class="portfolio-view">Click to view</div>
       </div>
+      <div class="portfolio-accordion">
+        <div class="portfolio-accordion-panel">
+          <button class="portfolio-close-btn" type="button" aria-label="Close project">×</button>
+          <h3>KRAFT & CO.</h3>
+          <div class="portfolio-accordion-meta">Industry · Fashion & Lifestyle</div>
+          <h4>The Challenge</h4>
+          <p>Kraft & Co. needed a brand identity that felt modern, timeless, and premium while standing out in a crowded fashion market. The goal was to build a brand people could wear with confidence—not just another footwear logo.</p>
+          <h4>Our Solution</h4>
+          <ul>
+            <li>Designed a bold, minimalist brand identity</li>
+            <li>Built a premium visual system for apparel and packaging</li>
+            <li>Created product mockups and brand applications</li>
+            <li>Developed a cohesive identity across digital and physical touchpoints</li>
+          </ul>
+          <h4>Deliverables</h4>
+          <ul>
+            <li>✓ Logo Design</li>
+            <li>✓ Brand Identity</li>
+            <li>✓ Apparel Branding</li>
+            <li>✓ Product Mockups</li>
+            <li>✓ Social Media Assets</li>
+          </ul>
+          <div class="portfolio-gallery">
+            <img src="./assets/kraft & Co logo.png" alt="Placeholder mockup 1">
+            <img src="./assets/Kraft & Co (1).png" alt="Placeholder mockup 2">
+            <img src="./assets/kraft & co flier.jpg" alt="Placeholder mockup 2">
+            <img src="./assets/Kraft & Co.png" alt="Placeholder mockup 2">
+          </div>
+          <div class="portfolio-accordion-result">Result: A fashion brand with a clean, premium identity designed to grow beyond footwear into a recognizable lifestyle brand.</div>
+        </div>
+      </div>
     </div>
     <div class="portfolio-card" tabindex="0" role="button" aria-label="Open Rukterra Botanics preview">
-      <div class="portfolio-ph">
-        <img class="portfolio-image" src="./assets/Untitled design (3).png" alt="Rukterra Botanics preview">
-      </div>
       <div class="portfolio-info">
         <div class="portfolio-client">Client 03</div>
         <div class="portfolio-project">Rukterra Botanics</div>
         <div class="portfolio-type">Brand Identity · Product Presentation · Logo · Flier · Social Media</div>
         <div class="portfolio-view">Click to view</div>
       </div>
+      <div class="portfolio-accordion">
+        <div class="portfolio-accordion-panel">
+          <button class="portfolio-close-btn" type="button" aria-label="Close project">×</button>
+          <h3>RUKTERRA BOTANICS</h3>
+          <div class="portfolio-accordion-meta">Industry · Natural Skincare</div>
+          <h4>The Challenge</h4>
+          <p>Rukterra sold premium coconut oil but looked like every other homemade seller on Instagram. The products lacked trust, consistency and premium appeal.</p>
+          <h4>Our Solution</h4>
+          <ul>
+            <li>Designed a luxury botanical identity</li>
+            <li>Created a premium packaging system</li>
+            <li>Designed realistic product mockups</li>
+            <li>Built a visual language ready for e-commerce</li>
+          </ul>
+          <h4>Deliverables</h4>
+          <ul>
+            <li>✓ Logo</li>
+            <li>✓ Brand Identity</li>
+            <li>✓ Product Labels</li>
+            <li>✓ Product Visualization</li>
+            <li>✓ Social Media Assets</li>
+          </ul>
+          <div class="portfolio-gallery">
+            <img src="./assets/ruktera.jpg" alt="Placeholder mockup 1">
+            <img src="./assets/RUKTERRA BOTANICS (1).png" alt="Placeholder mockup 2">
+            <img src="./assets/RUKTERRA BOTANICS (2).png" alt="Placeholder mockup 2">
+            <img src="./assets/rukterra product presentation.png" alt="Placeholder mockup 2">
+          </div>
+          <div class="portfolio-accordion-result">Result: A product customers can confidently perceive as a premium natural skincare brand.</div>
+        </div>
+      </div>
     </div>
     <div class="portfolio-card" tabindex="0" role="button" aria-label="Open Fila by mujeeb preview">
-      <div class="portfolio-ph">
-        <img class="portfolio-image" src="./assets/fila.jpg" alt="Fila by mujeeb preview">
-      </div>
       <div class="portfolio-info">
         <div class="portfolio-client">Client 04</div>
-        <div class="portfolio-project">Fila by mujeeb</div>
+        <div class="portfolio-project">Kaizen Touches</div>
         <div class="portfolio-type">Brand Identity · Naming · Logo</div>
         <div class="portfolio-view">Click to view</div>
+      </div>
+      <div class="portfolio-accordion">
+        <div class="portfolio-accordion-panel">
+          <button class="portfolio-close-btn" type="button" aria-label="Close project">×</button>
+          <h3>KAIZEN TOUCHES</h3>
+          <div class="portfolio-accordion-meta">Industry · Interior Design & Home Styling</div>
+          <h4>The Challenge</h4>
+          <p>Kaizen Touches delivered beautiful interior spaces, but they had no brand identity to reflect the premium quality of their work. They needed a visual identity that communicated creativity, elegance, and professionalism across every customer touchpoint.</p>
+          <h4>Our Solution</h4>
+          <ul>
+            <li>Designed a refined and timeless brand identity</li>
+            <li>Developed a cohesive visual language inspired by modern interiors</li>
+            <li>Created consistent brand assets for both digital and print use</li>
+          </ul>
+          <h4>Deliverables</h4>
+          <ul>
+            <li>✓ Logo Design</li>
+            <li>✓ Brand Identity</li>
+            <li>✓ Product Labels</li>
+            <li>✓ Product Visualization</li>
+            <li>✓ Social Media Assets</li>
+          </ul>
+          <div class="portfolio-gallery">
+            <img src="./assets/kaizen logo.png" alt="Placeholder mockup 1">
+            <img src="./assets/kaizen touches.jpg" alt="Placeholder mockup 2">
+          </div>
+          <div class="portfolio-accordion-result">Result: A product customers can confidently perceive as a premium natural skincare brand.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -779,14 +902,29 @@ footer{background:var(--ink);padding:72px 5vw 36px;border-top:1px solid #111;}
   });
 
   document.querySelectorAll('.portfolio-card').forEach((card) => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('is-open');
+    const toggleOpen = () => {
+      document.querySelectorAll('.portfolio-card').forEach((item) => {
+        item.classList.toggle('is-open', item === card);
+      });
+    };
+
+    card.addEventListener('click', (event) => {
+      if (event.target.closest('.portfolio-close-btn')) return;
+      toggleOpen();
     });
+
     card.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        card.classList.toggle('is-open');
+        toggleOpen();
       }
+    });
+
+    card.querySelectorAll('.portfolio-close-btn').forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        card.classList.remove('is-open');
+      });
     });
   });
 </script>
